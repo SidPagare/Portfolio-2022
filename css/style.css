@@ -79,3 +79,33 @@ h2,h3,h1{
 .working{
     margin-top: 2rem;;
 }
+.auto-scroll{
+    margin-left: -16px;
+    min-width: 100vw;
+    width: 880px;
+    color: white;
+    display: flex;
+    background-color: #4E37FC;
+}
+.auto-scroll .wrapper{
+    display: flex;
+    overflow: hidden;
+    transform: translate(0,0);
+    animation: autoscroll 4s linear infinite;
+}
+.scroll-item{
+    color: #ffffff00;
+    -webkit-text-stroke: 1px #ffffff;
+    margin-left: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+@keyframes autoscroll{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-100%,0);
+    }
+}
